@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stop it</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="page1" class="page active">
+        <div style="position: relative; width: 200px; height: 200px;" class="content">
+            <canvas id="gameBg" width="200" height="200"
+                style="position: absolute; top: 0; left: 0; z-index: 1;"></canvas>
+            <canvas id="gameCanvas" width="200" height="200"
+                style="position: absolute; top: 0; left: 0; z-index: 1;"></canvas>
+            <canvas id="levelCanvas" width="20" height="200"
+                style="position: absolute; bottom:0; left:0; z-index:3; background-color:#2c1a12;">
+            </canvas>
+            <canvas id="levelStatsCanvas" width="200" height="200"
+                style="position: absolute; top: 0; left: 0; z-index: 4;"></canvas>
+        </div>
+        <div id="timerArea"></div>
+        <div class="todo">
+            <button id="openModalBtn" class="btn">Add</button>
+            <div class="scrollable-div">
+                <table id="taskList"></table>
+            </div>
+        </div>
+    </div>
+    <div id="page2" class="page">
+       
+    </div>
+
+    <div id="entryModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <input id="taskInput" type="text" placeholder="Add a task..." />
+            <p id="modalWarning"></p>
+            <button class="btn" id="addBtn">Save</button>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="../js/popup.js"></script>
+    <script src="../js/modal.js"></script>
+    <!-- <script src="../js/timerTemplate.js"></script> -->
+</body>
+
+</html>
